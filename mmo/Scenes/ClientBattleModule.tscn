@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh6265yabsd2r"]
+
+[ext_resource type="Script" path="res://Scripts/ClientBattleModule.gd" id="1_n1ufl"]
+
+[node name="ClientBattleModule" type="Node"]
+script = ExtResource("1_n1ufl")
