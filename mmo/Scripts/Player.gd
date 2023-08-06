@@ -90,6 +90,7 @@ func next_move():
 		return
 	var next = move_queue.pop_front()
 	current_move = next
+	
 func clear_queue():
 	current_move = null
 	move_queue = []

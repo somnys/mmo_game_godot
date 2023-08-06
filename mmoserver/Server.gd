@@ -20,3 +20,5 @@ func _Peer_Connected(player_id):
 	print("User " + str(player_id) + " connected")
 func _Peer_Disconnected(player_id):
 	print("User " + str(player_id) + " disconnected")
+	
+
