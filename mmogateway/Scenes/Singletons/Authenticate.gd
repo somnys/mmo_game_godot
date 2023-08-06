@@ -6,9 +6,9 @@ var port = 13517
 var ip = "192.168.0.73"
 
 func _ready():
-	pass
+	ConnectToServer()
 	
-func StartServer():
+func ConnectToServer():
 	network.create_client(ip, port)
 	multiplayer.multiplayer_peer = network
 	print("Authentication server started")
@@ -22,7 +22,7 @@ func _OnConnectionFailed():
 func _OnConnectionSucceded():
 	print("Succesfully connected")
 	
-func AuthenticatePlayer(username, password, account_id, player_id):
+func AuthenticatePlayer(username, password, player_id):
 	pass
 	
 @rpc("any_peer")
