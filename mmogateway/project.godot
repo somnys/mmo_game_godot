@@ -10,13 +10,9 @@ config_version=5
 
 [application]
 
-config/name="mmoauth"
+config/name="mmogateway"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
-
-[autoload]
-
-PlayerData="*res://Singletons/PlayerData.gd"
 
 [rendering]
 

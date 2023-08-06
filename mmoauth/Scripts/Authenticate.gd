@@ -21,5 +21,5 @@ func _Peer_Disconnected(gateway_id):
 	print("User " + str(gateway_id) + " disconnected")
 	
 @rpc("any_peer")
-func AuthenticatePlayer(username, password, id, player_id): 
+func AuthenticatePlayer(username, password, account_id, player_id): 
 	pass

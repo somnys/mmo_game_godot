@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bgfpxoxg0umg1"]
+
+[node name="GatewayServer" type="Node"]
