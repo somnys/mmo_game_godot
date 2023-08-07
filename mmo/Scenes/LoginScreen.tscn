@@ -33,10 +33,12 @@ horizontal_alignment = 1
 [node name="Username" type="LineEdit" parent="VBoxContainer"]
 layout_mode = 2
 placeholder_text = "username"
+max_length = 30
 
 [node name="Password" type="LineEdit" parent="VBoxContainer"]
 layout_mode = 2
 placeholder_text = "password"
+max_length = 30
 secret = true
 
 [node name="LoginButton" type="Button" parent="VBoxContainer"]
@@ -46,9 +48,11 @@ text = "log in"
 [node name="AttemptMessage" type="Label" parent="VBoxContainer"]
 visible = false
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Attempting to login..."
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 1
 
 [node name="InvalidData" type="Popup" parent="."]
 initial_position = 2

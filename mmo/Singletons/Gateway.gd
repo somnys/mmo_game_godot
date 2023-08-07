@@ -48,12 +48,14 @@ func ReturnLoginRequest(result):
 	print("Result received")
 	if result == true:
 		print("Login Successful")
+		get_node("/root/LoginScreen").attempt.add_theme_color_override("font_color", Color(0, 0.81, 0.13))
 		get_node("/root/LoginScreen").attempt.text = "Login Successful"
 		Server.ConnectToServer()
 		network.close()
 	else:
 		print("Please provide correct username and password")
 		get_node("/root/LoginScreen").login_button.disabled = false
+		get_node("/root/LoginScreen").attempt.add_theme_color_override("font_color", Color(1, 0.18, 0.13))
 		get_node("/root/LoginScreen").attempt.text = "Please provide correct username and password"
 		multiplayer.disconnect("connection_failed", _OnConnectionFailed)
 		multiplayer.disconnect("connected_to_server", _OnConnectionSucceded)

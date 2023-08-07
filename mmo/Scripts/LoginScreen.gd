@@ -14,6 +14,7 @@ func _on_login_button_pressed():
 		login_button.disabled = true
 		var username = username_input.get_text()
 		var password = password_input.get_text()
+		attempt.get_node("/root/LoginScreen").attempt.add_theme_color_override("font_color", Color(1, 1, 1))
 		attempt.visible = true
 		print("Attempting to login...")
 		Gateway.ConnectToServer(username, password)
