@@ -5,6 +5,7 @@ var gateway_api = SceneMultiplayer.new()
 var port = 13521
 var max_players = 100
 
+
 func _process(delta):
 	if gateway_api.has_multiplayer_peer():
 		gateway_api.poll()
@@ -31,8 +32,11 @@ func _Peer_Disconnected(player_id):
 func LoginRequest(username, password):
 	print("Login request received")
 	var player_id = gateway_api.get_remote_sender_id()
-	Authenticate.AuthenticatePlayer(username, password, player_id)
-	
-func ReturnLoginRequest(result, player_id):
-	rpc_id(player_id, "ReturnLoginRequest", result)
-	gateway_api.disconnect_peer(player_id)
+	Authenticate.AuthenticatePlayerData(username, password, player_id)
+
+func ReturnLoginReq(result, player_id):
+	await rpc_id(player_id, "ReturnLoginRequest", result)
+	#gateway_api.disconnect_peer(player_id)
+
+#dummy functions for rpc
+@rpc("any_peer") func ReturnLoginRequest(result): pass

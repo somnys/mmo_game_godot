@@ -9,11 +9,13 @@ var username
 var password
 
 
+
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 func _process(delta):
+	#setup polling
 	if gateway_api.has_multiplayer_peer():
 		gateway_api.poll()
 
@@ -32,24 +34,30 @@ func _OnConnectionFailed():
 	
 func _OnConnectionSucceded():
 	print("Connected with gateway")
-	LoginRequest(username, password)
+	RequestLogin()
 
-func LoginRequest(_username, _password):
+func RequestLogin():
 	print("Connecting to gateway to request login")
-	rpc_id(1, "LoginRequest", _username, _password)
+	#call function LoginRequest in gateway server
+	rpc_id(1, "LoginRequest", username, password)
 	username = ""
 	password = ""
 	
 @rpc("any_peer")
-func ReturnLoginRequest(results):
+func ReturnLoginRequest(result):
 	print("Result received")
-	if results == true:
+	if result == true:
 		print("Login Successful")
+		get_node("/root/LoginScreen").attempt.text = "Login Successful"
 		Server.ConnectToServer()
+		network.close()
 	else:
 		print("Please provide correct username and password")
 		get_node("/root/LoginScreen").login_button.disabled = false
+		get_node("/root/LoginScreen").attempt.text = "Please provide correct username and password"
 		multiplayer.disconnect("connection_failed", _OnConnectionFailed)
 		multiplayer.disconnect("connected_to_server", _OnConnectionSucceded)
-	
+		network.close()
 
+#dummy functions for rpc
+@rpc("any_peer") func LoginRequest(username, password): pass

@@ -4,6 +4,7 @@ var network = ENetMultiplayerPeer.new()
 var port = 13517
 var max_servers = 5
 
+
 func _ready():
 	StartServer()
 	
@@ -16,9 +17,9 @@ func StartServer():
 	network.connect("peer_disconnected", _Peer_Disconnected)
 	
 func _Peer_Connected(gateway_id): 
-	print("User " + str(gateway_id) + " connected")
+	print("Gateway " + str(gateway_id) + " connected")
 func _Peer_Disconnected(gateway_id):
-	print("User " + str(gateway_id) + " disconnected")
+	print("Gateway " + str(gateway_id) + " disconnected")
 	
 @rpc("any_peer")
 func AuthenticatePlayer(username, password, player_id): 
@@ -37,4 +38,5 @@ func AuthenticatePlayer(username, password, player_id):
 	print("Authentication result send to gateway server")
 	rpc_id(gateway_id, "AuthenticationResults", result, player_id)
 	
-	
+#dummy functions for rpc
+@rpc("any_peer") func AuthenticationResults(result, player_id): pass

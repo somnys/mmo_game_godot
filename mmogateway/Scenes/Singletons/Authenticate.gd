@@ -21,11 +21,14 @@ func _OnConnectionFailed():
 func _OnConnectionSucceded():
 	print("Succesfully connected with auth server")
 	
-func AuthenticatePlayer(username, password, player_id):
+func AuthenticatePlayerData(username, password, player_id):
 	print("Send authentication request")
 	rpc_id(1, "AuthenticatePlayer", username, password, player_id)
 	
 @rpc("any_peer")
 func AuthenticationResults(result, player_id): 
 	print("Result received and replaying to player login request")
-	Gateway.ReturnLoginRequest(result, player_id)
+	Gateway.ReturnLoginReq(result, player_id)
+	
+#dummy functions for rpc
+@rpc("any_peer") func AuthenticatePlayer(username, password, player_id): pass
