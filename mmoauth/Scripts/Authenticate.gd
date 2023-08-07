@@ -5,7 +5,7 @@ var port = 13517
 var max_servers = 5
 
 func _ready():
-	pass
+	StartServer()
 	
 func StartServer():
 	network.create_server(port, max_servers)
@@ -22,5 +22,19 @@ func _Peer_Disconnected(gateway_id):
 	
 @rpc("any_peer")
 func AuthenticatePlayer(username, password, player_id): 
-	pass
+	print("Authentication request received")
+	var gateway_id = multiplayer.get_remote_sender_id()
+	var result
+	if not PlayerData.player_data.has(username):
+		print("User not recognized")
+		result = false
+	elif not PlayerData.player_data[username]["Password"] == password:
+		print("Incorrect password")
+		result = false
+	else:
+		print("Successful authentication")
+		result = true
+	print("Authentication result send to gateway server")
+	rpc_id(gateway_id, "AuthenticationResults", result, player_id)
+	
 	

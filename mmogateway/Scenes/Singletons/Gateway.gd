@@ -5,8 +5,10 @@ var gateway_api = SceneMultiplayer.new()
 var port = 13521
 var max_players = 100
 
-
-# Called when the node enters the scene tree for the first time.
+func _process(delta):
+	if gateway_api.has_multiplayer_peer():
+		gateway_api.poll()
+		
 func _ready():
 	StartServer()
 
@@ -27,7 +29,10 @@ func _Peer_Disconnected(player_id):
 	
 @rpc("any_peer")
 func LoginRequest(username, password):
-	pass
+	print("Login request received")
+	var player_id = gateway_api.get_remote_sender_id()
+	Authenticate.AuthenticatePlayer(username, password, player_id)
 	
 func ReturnLoginRequest(result, player_id):
-	pass
+	rpc_id(player_id, "ReturnLoginRequest", result)
+	gateway_api.disconnect_peer(player_id)

@@ -1,11 +1,12 @@
 extends Node
 
 var network = ENetMultiplayerPeer.new()
-var ip = "192.168.0.73"
+var ip = "127.0.0.1"
 var port = 13512
 
 func _ready():
-	ConnectToServer()
+	pass
+	#ConnectToServer()
 	
 func ConnectToServer():
 	network.create_client(ip, port)
