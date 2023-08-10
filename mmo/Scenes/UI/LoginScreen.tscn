@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://ds00pv1gp5wex"]
+[gd_scene load_steps=7 format=3 uid="uid://ds00pv1gp5wex"]
 
-[ext_resource type="Script" path="res://Scripts/LoginScreen.gd" id="1_n77w3"]
+[ext_resource type="Script" path="res://Scripts/LoginScreen.gd" id="1_yepxs"]
+[ext_resource type="Texture2D" uid="uid://d2dqcuod7x6ql" path="res://Resources/Graphics/ithan.7.png" id="2_c7tq5"]
+[ext_resource type="Shader" path="res://Resources/Shaders/vignette.gdshader" id="3_2gesk"]
+[ext_resource type="Shader" path="res://Resources/Shaders/blur.gdshader" id="3_po2le"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ol16"]
+shader = ExtResource("3_2gesk")
+shader_parameter/player_position = Vector2(0.5, 0.5)
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/MULTIPLIER = 0.7
+shader_parameter/SCALE = 0.9
+shader_parameter/SOFTNESS = 0.7
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4kgo3"]
+shader = ExtResource("3_po2le")
+shader_parameter/blur_amount = 2.0
 
 [node name="LoginScreen" type="Control"]
 layout_mode = 3
@@ -9,7 +24,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_n77w3")
+script = ExtResource("1_yepxs")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -948.0
+offset_top = -527.0
+offset_right = 2124.0
+offset_bottom = 2673.0
+texture = ExtResource("2_c7tq5")
+
+[node name="Vignette" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_8ol16")
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+
+[node name="Blur" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_4kgo3")
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 649.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

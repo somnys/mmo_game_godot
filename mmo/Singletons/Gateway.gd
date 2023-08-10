@@ -31,6 +31,8 @@ func ConnectToServer(_username, _password):
 
 func _OnConnectionFailed():
 	print("Failed to connect with gateway")
+	get_node("/root/LoginScreen").attempt.add_theme_color_override("font_color", Color(1, 0.18, 0.13))
+	get_node("/root/LoginScreen").attempt.text = "Failed to connect with gateway server"
 	
 func _OnConnectionSucceded():
 	print("Connected with gateway")

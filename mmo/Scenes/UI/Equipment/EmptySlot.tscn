@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4gpfq7ddjrnv"]
+
+[ext_resource type="Texture2D" uid="uid://ddbm4v4crja25" path="res://Resources/Graphics/empty_slot.png" id="1_nucj7"]
+
+[node name="EmptySlot" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_nucj7")

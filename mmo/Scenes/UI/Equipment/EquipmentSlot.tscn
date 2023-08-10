@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c63ybhvyl7gns"]
+
+[ext_resource type="Texture2D" uid="uid://c7eeuhys6bdhy" path="res://Resources/Graphics/item_slot.png" id="1_x2oj4"]
+
+[node name="EquipmentSlot" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_x2oj4")
+
+[node name="Item" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
