@@ -1,0 +1,59 @@
+{
+  "0": {
+    "account_info": {
+      "0": {
+        "character_info": {
+          "name": "admin",
+          "gold": 10000,
+          "lvl": 1,
+          "prof": "b",
+          "exp": 0,
+          "expoverall": 0,
+          "exptonext": 2
+        },
+        "stats": {
+          "str": 3,
+          "ag": 3,
+          "int": 3,
+          "sa": 1,
+          "hp": 500
+        },
+        "items": {
+          "eq": {
+            "dupa": "dupa"
+          },
+          "inv": {
+            "dupa": "dupa"
+          }
+        }
+      },
+      "1": {
+        "character_info": {
+          "name": "admiinek",
+          "gold": 10000,
+          "lvl": 2,
+          "prof": "p",
+          "exp": 0,
+          "expoverall": 2,
+          "exptonext": 4
+        },
+        "stats": {
+          "str": 5,
+          "ag": 5,
+          "int": 3,
+          "sa": 1,
+          "hp": 500
+        },
+        "items": {
+          "eq": {
+            "dupa": "dupa"
+          },
+          "inv": {
+            "dupa": "dupa"
+          }
+        }
+      }
+    },
+    "logged_in": false
+  }
+}

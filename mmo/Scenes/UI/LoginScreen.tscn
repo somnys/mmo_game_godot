@@ -15,7 +15,7 @@ shader_parameter/SOFTNESS = 0.7
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4kgo3"]
 shader = ExtResource("3_po2le")
-shader_parameter/blur_amount = 2.0
+shader_parameter/blur_amount = 1.5
 
 [node name="LoginScreen" type="Control"]
 layout_mode = 3
@@ -29,11 +29,13 @@ script = ExtResource("1_yepxs")
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = -948.0
+offset_left = -961.0
 offset_top = -527.0
-offset_right = 2124.0
-offset_bottom = 2673.0
+offset_right = 1167.0
+offset_bottom = 678.0
 texture = ExtResource("2_c7tq5")
+expand_mode = 1
+stretch_mode = 1
 
 [node name="Vignette" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_8ol16")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://wtqpn6stf48x"]
+
+[ext_resource type="Script" path="res://Main/Instances/PlayerVerification.gd" id="1_jux7o"]
+
+[node name="PlayerVerification" type="Node"]
+script = ExtResource("1_jux7o")
