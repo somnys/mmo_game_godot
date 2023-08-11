@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://edjylhjokx03"]
+
+[ext_resource type="PackedScene" uid="uid://osgq6wug5guv" path="res://Scenes/UI/CharacterBanner.tscn" id="1_omk7m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hc75c"]
+bg_color = Color(0.109804, 0.054902, 0.0117647, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.517647, 0.329412, 0.192157, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mjlld"]
+bg_color = Color(0.133333, 0.0823529, 0.0509804, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.517647, 0.329412, 0.192157, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="CharacterSelectScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 500.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hc75c")
+
+[node name="Selection" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mjlld")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Selection"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 197.0
+offset_bottom = 397.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Selection/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 42
+
+[node name="CharacterBanner" parent="Panel/Selection/ScrollContainer/VBoxContainer" instance=ExtResource("1_omk7m")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="CharacterBanner2" parent="Panel/Selection/ScrollContainer/VBoxContainer" instance=ExtResource("1_omk7m")]
+layout_mode = 2
+
+[node name="CharacterBanner3" parent="Panel/Selection/ScrollContainer/VBoxContainer" instance=ExtResource("1_omk7m")]
+layout_mode = 2

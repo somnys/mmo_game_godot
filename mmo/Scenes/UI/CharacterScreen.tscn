@@ -382,108 +382,108 @@ layout_mode = 2
 [node name="EquipmentSlot7" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="SixthRow2" type="GridContainer" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory"]
+[node name="SeventhRow" type="GridContainer" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory"]
 layout_mode = 2
 theme_override_constants/h_separation = 4
 columns = 7
 
-[node name="EquipmentSlot" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow2" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SeventhRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot2" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow2" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot2" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SeventhRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot3" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow2" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot3" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SeventhRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot4" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow2" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot4" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SeventhRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot5" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow2" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot5" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SeventhRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot6" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow2" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot6" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SeventhRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot7" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow2" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot7" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SeventhRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="SixthRow3" type="GridContainer" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory"]
-layout_mode = 2
-theme_override_constants/h_separation = 4
-columns = 7
-
-[node name="EquipmentSlot" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow3" instance=ExtResource("1_5vonj")]
-layout_mode = 2
-
-[node name="EquipmentSlot2" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow3" instance=ExtResource("1_5vonj")]
-layout_mode = 2
-
-[node name="EquipmentSlot3" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow3" instance=ExtResource("1_5vonj")]
-layout_mode = 2
-
-[node name="EquipmentSlot4" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow3" instance=ExtResource("1_5vonj")]
-layout_mode = 2
-
-[node name="EquipmentSlot5" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow3" instance=ExtResource("1_5vonj")]
-layout_mode = 2
-
-[node name="EquipmentSlot6" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow3" instance=ExtResource("1_5vonj")]
-layout_mode = 2
-
-[node name="EquipmentSlot7" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow3" instance=ExtResource("1_5vonj")]
-layout_mode = 2
-
-[node name="SixthRow4" type="GridContainer" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory"]
+[node name="EighthRow" type="GridContainer" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory"]
 layout_mode = 2
 theme_override_constants/h_separation = 4
 columns = 7
 
-[node name="EquipmentSlot" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow4" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/EighthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot2" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow4" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot2" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/EighthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot3" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow4" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot3" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/EighthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot4" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow4" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot4" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/EighthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot5" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow4" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot5" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/EighthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot6" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow4" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot6" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/EighthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot7" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow4" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot7" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/EighthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="SixthRow5" type="GridContainer" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory"]
+[node name="NinthRow" type="GridContainer" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory"]
 layout_mode = 2
 theme_override_constants/h_separation = 4
 columns = 7
 
-[node name="EquipmentSlot" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow5" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/NinthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot2" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow5" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot2" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/NinthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot3" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow5" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot3" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/NinthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot4" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow5" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot4" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/NinthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot5" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow5" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot5" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/NinthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot6" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow5" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot6" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/NinthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
-[node name="EquipmentSlot7" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/SixthRow5" instance=ExtResource("1_5vonj")]
+[node name="EquipmentSlot7" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/NinthRow" instance=ExtResource("1_5vonj")]
+layout_mode = 2
+
+[node name="TenthRow" type="GridContainer" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory"]
+layout_mode = 2
+theme_override_constants/h_separation = 4
+columns = 7
+
+[node name="EquipmentSlot" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/TenthRow" instance=ExtResource("1_5vonj")]
+layout_mode = 2
+
+[node name="EquipmentSlot2" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/TenthRow" instance=ExtResource("1_5vonj")]
+layout_mode = 2
+
+[node name="EquipmentSlot3" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/TenthRow" instance=ExtResource("1_5vonj")]
+layout_mode = 2
+
+[node name="EquipmentSlot4" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/TenthRow" instance=ExtResource("1_5vonj")]
+layout_mode = 2
+
+[node name="EquipmentSlot5" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/TenthRow" instance=ExtResource("1_5vonj")]
+layout_mode = 2
+
+[node name="EquipmentSlot6" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/TenthRow" instance=ExtResource("1_5vonj")]
+layout_mode = 2
+
+[node name="EquipmentSlot7" parent="Character/VBoxContainer/InventoryPanel/ScrollContainer/Inventory/TenthRow" instance=ExtResource("1_5vonj")]
 layout_mode = 2
 
 [node name="Stats" type="Panel" parent="Character"]

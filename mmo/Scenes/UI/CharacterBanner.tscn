@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://osgq6wug5guv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riy1g"]
+bg_color = Color(0.109804, 0.054902, 0.0117647, 0.717647)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.517647, 0.329412, 0.192157, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="CharacterBanner" type="Control"]
+layout_mode = 3
+anchor_right = 0.164931
+anchor_bottom = 0.0617284
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_riy1g")
+
+[node name="NameLvl" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -53.5
+offset_right = 53.5
+offset_bottom = 19.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 11
+text = "<nickname> <lvl> lvl"
+
+[node name="Prof" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = -8.0
+offset_right = 49.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "<huj dmuchany>"
+horizontal_alignment = 1
+
+[node name="TimeSpent" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = 4.0
+offset_right = 49.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 9
+text = "Played for <x>d<x>h"
+horizontal_alignment = 1

@@ -25,6 +25,7 @@ func AuthenticatePlayerData(username, password, player_id):
 	print("Send authentication request")
 	rpc_id(1, "AuthenticatePlayer", username, password, player_id)
 	
+#function will also send peer account_id on succesful authentication	
 @rpc("any_peer")
 func AuthenticationResults(result, player_id): 
 	print("Result received and replaying to player login request")
