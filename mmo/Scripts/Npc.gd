@@ -1,7 +1,7 @@
 extends Area2D
 
-var is_friendly
-var npc_data = {}
+var is_friendly :bool
+var npc_data :Dictionary
 
 #temp stat variables for battle testing
 var dmg = 1
