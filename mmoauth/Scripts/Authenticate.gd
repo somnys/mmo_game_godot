@@ -3,6 +3,7 @@ extends Node
 var network = ENetMultiplayerPeer.new()
 var port = 13517
 var max_servers = 5
+var token = ""
 
 
 func _ready():
@@ -16,10 +17,14 @@ func StartServer():
 	network.connect("peer_connected", _Peer_Connected)
 	network.connect("peer_disconnected", _Peer_Disconnected)
 	
+	
 func _Peer_Connected(gateway_id): 
 	print("Gateway " + str(gateway_id) + " connected")
+	
+	
 func _Peer_Disconnected(gateway_id):
 	print("Gateway " + str(gateway_id) + " disconnected")
+	
 	
 @rpc("any_peer")
 func AuthenticatePlayer(username, password, player_id): 
@@ -35,8 +40,14 @@ func AuthenticatePlayer(username, password, player_id):
 	else:
 		print("Successful authentication")
 		result = true
+		
+		randomize()
+		token = str(randi()).sha256_text() + str(Time.get_unix_time_from_system())
+		var gameserver = "GameServer1" #to będzie zmienione jak będzie więcej niż jeden serwer
+		GameServers.DistributeLoginToken(token, gameserver)
+		
 	print("Authentication result send to gateway server")
-	rpc_id(gateway_id, "AuthenticationResults", result, player_id)
+	rpc_id(gateway_id, "AuthenticationResults", result, player_id, token)
 	
 #dummy functions for rpc
 @rpc("any_peer") func AuthenticationResults(result, player_id): pass

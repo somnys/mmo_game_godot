@@ -27,9 +27,9 @@ func AuthenticatePlayerData(username, password, player_id):
 	
 #function will also send peer account_id on succesful authentication	
 @rpc("any_peer")
-func AuthenticationResults(result, player_id): 
+func AuthenticationResults(result, player_id, token): 
 	print("Result received and replaying to player login request")
-	Gateway.ReturnLoginReq(result, player_id)
+	Gateway.ReturnLoginReq(result, player_id, token)
 	
 #dummy functions for rpc
 @rpc("any_peer") func AuthenticatePlayer(username, password, player_id): pass

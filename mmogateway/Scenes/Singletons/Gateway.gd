@@ -34,8 +34,8 @@ func LoginRequest(username, password):
 	var player_id = gateway_api.get_remote_sender_id()
 	Authenticate.AuthenticatePlayerData(username, password, player_id)
 
-func ReturnLoginReq(result, player_id):
-	await rpc_id(player_id, "ReturnLoginRequest", result)
+func ReturnLoginReq(result, player_id, token):
+	await rpc_id(player_id, "ReturnLoginRequest", result, token)
 	#gateway_api.disconnect_peer(player_id)
 
 #dummy functions for rpc

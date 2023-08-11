@@ -52,6 +52,7 @@ func ReturnLoginRequest(result):
 		print("Login Successful")
 		get_node("/root/LoginScreen").attempt.add_theme_color_override("font_color", Color(0, 0.81, 0.13))
 		get_node("/root/LoginScreen").attempt.text = "Login Successful"
+		Server.token = token
 		Server.ConnectToServer()
 		network.close()
 	else:
