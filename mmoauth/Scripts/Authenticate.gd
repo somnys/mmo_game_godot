@@ -1,5 +1,10 @@
 extends Node
 
+#Client-to-gateway port 13521
+#Gateway-to-Auth port 13517
+#Client-to-gameserver port 13512
+#Game server-to-Auth port 13524
+
 var network = ENetMultiplayerPeer.new()
 var port = 13517
 var max_servers = 5

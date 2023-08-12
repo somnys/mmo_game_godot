@@ -2,7 +2,7 @@ extends Node
 
 var network = ENetMultiplayerPeer.new()
 var gateway_api = SceneMultiplayer.new()
-var port = 1912
+var port = 13524
 var ip = "127.0.0.1"
 
 @onready var main_interface = get_node("/root/Server")
