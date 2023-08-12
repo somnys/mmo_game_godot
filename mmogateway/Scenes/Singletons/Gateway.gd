@@ -36,7 +36,6 @@ func LoginRequest(username, password):
 
 func ReturnLoginReq(result, player_id, token):
 	await rpc_id(player_id, "ReturnLoginRequest", result, token)
-	#gateway_api.disconnect_peer(player_id)
 
 #dummy functions for rpc
-@rpc("any_peer") func ReturnLoginRequest(result): pass
+@rpc("any_peer") func ReturnLoginRequest(result, token): pass

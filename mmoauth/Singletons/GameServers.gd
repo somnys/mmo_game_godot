@@ -14,16 +14,15 @@ func _ready():
 	
 	
 func _process(delta):
-	if not multiplayer.has_network_peers():
-		return
-	multiplayer.poll()
+	if gateway_api.has_multiplayer_peer():
+		gateway_api.poll()
 	
 
 func StartServer():
 	network.create_server(port, max_players)
 	get_tree().set_multiplayer(gateway_api, self.get_path())
 	multiplayer.set_multiplayer_peer(network)
-	print("Gateway server started")
+	print("Hub server started")
 	
 	network.connect("peer_connected", _Peer_Connected)
 	network.connect("peer_disconnected", _Peer_Disconnected)	
@@ -42,4 +41,7 @@ func _Peer_Disconnected(gameserver_id):
 	
 func DistributeLoginToken(token, gameserver):
 	var gameserver_peer_id = gameserverlist[gameserver]
-	rpc_id(gameserver_peer_id, "RecieveLoginToken", token)
+	rpc_id(gameserver_peer_id, "ReceiveLoginToken", token)
+	
+#dummy functions for rpc to fuck off
+@rpc("any_peer") func ReceiveLoginToken(token) : pass

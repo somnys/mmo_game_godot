@@ -42,8 +42,8 @@ func AuthenticatePlayer(username, password, player_id):
 		result = true
 		
 		randomize()
-		token = str(randi()).sha256_text() + str(Time.get_unix_time_from_system())
-		var gameserver = "GameServer1" #to będzie zmienione jak będzie więcej niż jeden serwer
+		token = str(randi()).sha256_text() + str(int(Time.get_unix_time_from_system()))
+		var gameserver = "GameServer1" #to będzie zmienione jak będzie więcej niż jeden serwer ; czyli nie bedzie do wyjebania
 		GameServers.DistributeLoginToken(token, gameserver)
 		
 	print("Authentication result send to gateway server")

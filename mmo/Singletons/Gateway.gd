@@ -46,7 +46,7 @@ func RequestLogin():
 	password = ""
 	
 @rpc("any_peer")
-func ReturnLoginRequest(result):
+func ReturnLoginRequest(result, token):
 	print("Result received")
 	if result == true:
 		print("Login Successful")

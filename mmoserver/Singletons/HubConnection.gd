@@ -5,22 +5,22 @@ var gateway_api = SceneMultiplayer.new()
 var port = 1912
 var ip = "127.0.0.1"
 
-@onready var gameserver = get_node("/root/Server")
+@onready var main_interface = get_node("/root/Server")
 
 
 func _ready():
-	StartServer()
+	StartClient()
 	
 	
 func _process(delta):
 	if get_tree().get_multiplayer() == null:
 		return
-	if not multiplayer.has_network_peers():
-		return
-	multiplayer.poll()
+	if gateway_api.has_multiplayer_peer():
+		multiplayer.poll()
+	
 	
 
-func StartServer():
+func StartClient():
 	network.create_client(ip, port)
 	get_tree().set_multiplayer(gateway_api, self.get_path())
 	multiplayer.set_multiplayer_peer(network)
@@ -38,5 +38,5 @@ func _OnConnectionSucceded():
 	
 
 @rpc("any_peer")
-func RecieveLoginToken(token):
-	gameserver.expected_tokens.append(token)
+func ReceiveLoginToken(token):
+	main_interface.expected_tokens.append(token)

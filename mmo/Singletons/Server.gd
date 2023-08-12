@@ -27,14 +27,17 @@ func _OnServerTerminated():
 	print("Server closed")
 	
 	
-@rpc("any_peer") func FetchToken(): rpc_id(1, "ReturnToken", token)
-
+@rpc("any_peer") 
+func FetchToken(): 
+	rpc_id(1, "ReturnToken", token)
 
 @rpc("any_peer")
 func ReturnTokenVerificationResults(result):
 	if result == true:
-		get_node("res://Scenes/UI/LoginScreen.tscn").queue_free()
 		print("Successful token verification")
 	else:
-		print("Login failed, please try again")
-		get_node("res://Scenes/UI/LoginScreen.tscn").login_button.disabled = false
+		print("Token verification failed, please try again")
+		get_node("root/LoginScreen.tscn").login_button.disabled = false
+
+#dummy functions for rpc to fuck off
+@rpc("any_peer") func ReturnToken(token): pass
